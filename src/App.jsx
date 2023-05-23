@@ -1,16 +1,13 @@
-import "./App.css";
-import { Footer } from "./Footer";
-import { Home } from "./Home";
-import { Navbar } from "./Navbar";
+import { Navbar } from "./components/layout/navbar/Navbar";
+import { ItemListContainer } from "./components/pages/itemlistcontainer/ItemListContainer";
 
 function App() {
   return (
-    <>
+    <div>
       <h1>Titulo</h1>
       <Navbar />
-      <Home />
-      <Footer />
-    </>
+      <ItemListContainer />
+    </div>
   );
 }
 
