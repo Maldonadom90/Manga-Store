@@ -1,7 +1,10 @@
-export const ItemListContainer = () => {
+import style from "./ItemListContainer.module.css";
+
+export const ItemListContainer = ({ greeting }) => {
   return (
-    <div>
-      <h1>Aca va la lista de productos</h1>
+    <div className={style.container}>
+      <h1>{greeting}</h1>
+      <h2>Aca va la lista de productos</h2>
     </div>
   );
 };
