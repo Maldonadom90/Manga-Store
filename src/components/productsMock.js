@@ -47,7 +47,7 @@ export const products = [
     description:
       "El sueño de Naruto es el de llegar un día a heredar el nombre de Hokage, reservado a los grandes héroes y de convertirse en el mejor ninja de todos los tiempos. Capítulos: 8 al 17.  Masashi Kishimoto",
     category: "Naruto",
-    img: "https://res.cloudinary.com/dfnz48rpd/image/upload/h_300,w_200/v1686607048/Proyecto%20Manga%20React/Naruto2_wqjwx9.jpg",
+    img: "https://res.cloudinary.com/dfnz48rpd/image/upload/h_300,w_200/v1686626990/Proyecto%20Manga%20React/Naruto2_rjw1hq.jpg",
   },
   {
     id: 6,
@@ -87,6 +87,6 @@ export const products = [
     description:
       "Manga escrito y dibujado por Eiichiro Oda, que ilustra las aventuras de los protagonistas piratas, en concreto la tripulación pirata formada por Monkey D. Luffy, quienes están en la búsqueda de un tesoro llamado One Piece. Capítulos: 22 al 41.",
     category: "OnePiece",
-    img: "https://res.cloudinary.com/dfnz48rpd/image/upload/h_300,w_200/v1686607049/Proyecto%20Manga%20React/OnePiece3_y1rmru.jpg",
+    img: "https://res.cloudinary.com/dfnz48rpd/image/upload/h_300,w_200/v1686626899/Proyecto%20Manga%20React/OnePiece3_oxtop3.jpg",
   },
 ];
