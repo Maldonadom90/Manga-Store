@@ -6,18 +6,22 @@ function App() {
     <div>
       <h1
         style={{
-          backgroundColor: "black",
-          color: "whitesmoke",
+          backgroundColor: " #2a7190 ",
+          color: " #dde1da ",
           padding: "20px 20px",
           textAlign: "center",
           margin: "10px",
-          borderRadius: "2em",
+          borderRadius: ".5em",
+          display: "flex",
+          width: "450px",
+          alignItems: "center",
+          justifyContent: "center",
         }}
       >
         Capsule Corp. Manga Store
       </h1>
       <Navbar />
-      <ItemListContainer greeting={"Bienvenidos a la tienda online de manga"} />
+      <ItemListContainer />
     </div>
   );
 }
