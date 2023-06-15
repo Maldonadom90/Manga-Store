@@ -1,4 +1,4 @@
-import "./Cards.module.css";
+import { Link } from "react-router-dom";
 
 const Cards = ({ elemento }) => {
   return (
@@ -6,8 +6,9 @@ const Cards = ({ elemento }) => {
       <img src={elemento.img} alt={elemento.title} />
       <h2>{elemento.title}</h2>
       <div>
-        <h4>${elemento.price}</h4>
-        <button>Reservar</button>
+        <Link to={`/itemDetail/${elemento.id}`}>
+          <button>+INFO</button>
+        </Link>
       </div>
     </div>
   );

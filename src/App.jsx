@@ -1,27 +1,23 @@
-import { Navbar } from "./components/layout/navbar/Navbar";
-import { ItemListContainer } from "./components/pages/itemlistcontainer/ItemListContainer";
-
+import Layout from "./components/layout/Layout";
+import ItemDetailContainer from "./components/pages/itemDetail/itemDetailContainer";
+import ItemListContainer from "./components/pages/itemList/ItemListContainer";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 function App() {
   return (
     <div>
-      <h1
-        style={{
-          backgroundColor: " #2a7190 ",
-          color: " #dde1da ",
-          padding: "20px 20px",
-          textAlign: "center",
-          margin: "10px",
-          borderRadius: ".5em",
-          display: "flex",
-          width: "450px",
-          alignItems: "center",
-          justifyContent: "center",
-        }}
-      >
-        Capsule Corp. Manga Store
-      </h1>
-      <Navbar />
-      <ItemListContainer />
+      <BrowserRouter>
+        <Routes>
+          <Route element={<Layout />}>
+            <Route path="/" element={<ItemListContainer />} />
+            <Route
+              path="/category/:categoryName"
+              element={<ItemListContainer />}
+            />
+            <Route path="/itemDetail/:id" element={<ItemDetailContainer />} />
+          </Route>
+          <Route path="*" element={<h1>404 not route</h1>} />
+        </Routes>
+      </BrowserRouter>
     </div>
   );
 }

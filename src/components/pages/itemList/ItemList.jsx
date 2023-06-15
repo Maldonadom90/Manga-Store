@@ -1,5 +1,5 @@
 import style from "./ItemListContainer.module.css";
-import Cards from "../../common/Cards/Cards";
+import Cards from "../../common/cards/Cards";
 
 export const ItemList = ({ items }) => {
   return (
