@@ -1,0 +1,11 @@
+.detail {
+  background-color: #2a7190;
+  color: whitesmoke;
+  min-height: 50px;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
+}

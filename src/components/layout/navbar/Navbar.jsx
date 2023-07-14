@@ -1,6 +1,7 @@
-import { CartWidget } from "../../common/cartwidget/CartWidget";
 import style from "./Navbar.module.css";
 import { Link } from "react-router-dom";
+import { menuNav } from "../../../routes/menuNav";
+import CartWidget from "../../common/cartwidget/CartWidget";
 
 export const Navbar = () => {
   return (
@@ -9,20 +10,15 @@ export const Navbar = () => {
         <img src=".././public/bulma.png" alt="logo" />
       </Link>
       <ul className={style.items}>
-        <Link to="/" className={style.button}>
-          Mangas
-        </Link>
-        <Link to="/category/DragonBall" className={style.button}>
-          Dragon Ball
-        </Link>
-        <Link to="/category/Naruto" className={style.button}>
-          Naruto
-        </Link>
-        <Link to="/category/OnePiece" className={style.button}>
-          One Piece
-        </Link>
+        {menuNav.map(({ id, path, title }) => (
+          <Link key={id} to={path}>
+            {title}
+          </Link>
+        ))}
       </ul>
-      <CartWidget />
+      <Link to="/cart">
+        <CartWidget />
+      </Link>
     </div>
   );
 };

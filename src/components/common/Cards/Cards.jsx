@@ -1,12 +1,12 @@
 import { Link } from "react-router-dom";
 
-const Cards = ({ elemento }) => {
+const Cards = ({ element }) => {
   return (
     <div>
-      <img src={elemento.img} alt={elemento.title} />
-      <h2>{elemento.title}</h2>
+      <img src={element.img} alt={element.title} />
+      <h2>{element.title}</h2>
       <div>
-        <Link to={`/itemDetail/${elemento.id}`}>
+        <Link to={`/itemDetail/${element.id}`}>
           <button>+INFO</button>
         </Link>
       </div>
