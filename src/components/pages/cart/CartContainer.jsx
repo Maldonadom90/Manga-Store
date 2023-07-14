@@ -1,6 +1,6 @@
 import { useContext } from "react";
 import { CartContext } from "../../../context/CartContext";
-import style from "../cart/CartContainer.module.css";
+import Cart from "./Cart";
 import Swal from "sweetalert2";
 
 const CartContainer = () => {
@@ -25,22 +25,13 @@ const CartContainer = () => {
   };
 
   return (
-    <div className={style.detail}>
-      <h2>El total del carrito es: $ {total} </h2>
-      {cart.length > 0 && <button onClick={emptyCart}>Vaciar carrito</button>}
-      {cart.map((product) => {
-        return (
-          <div key={product.id}>
-            <h3>{product.title}</h3>
-            <img src={product.img} alt={product.title} />
-            <h3>${product.price}</h3>
-            <h4 className={style.quantity}>{product.quantity}</h4>
-            <button onClick={() => removeProductSelected(product.id)}>
-              Eliminar 💣
-            </button>
-          </div>
-        );
-      })}
+    <div>
+      <Cart
+        total={total}
+        emptyCart={emptyCart}
+        cart={cart}
+        removeProductSelected={removeProductSelected}
+      />
     </div>
   );
 };

@@ -45,7 +45,7 @@ const CartContextProvider = ({ children }) => {
   };
 
   const getTotalQuantityById = (id) => {
-    let producto = cart.find((prod) => prod.id === +id);
+    let producto = cart.find((prod) => prod.id === id);
     return producto?.quantity;
   };
   const getTotalItems = () => {

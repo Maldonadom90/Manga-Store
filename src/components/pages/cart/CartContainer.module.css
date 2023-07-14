@@ -1,6 +1,6 @@
 .detail {
   display: flex;
-  flex-direction: row;
+  flex-direction: row-reverse;
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
@@ -50,9 +50,63 @@
 }
 .quantity {
   background-color: black;
-  width: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
   margin: 5px;
   padding: 5px;
   border-radius: 0.3em;
   color: whitesmoke;
+}
+.shop {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 1em;
+}
+.shop h1 {
+  background-color: #2a6273;
+  margin: 10px;
+  padding: 10px;
+  color: whitesmoke;
+  border-radius: 0.2em;
+  border: 3px dashed black;
+}
+.shop button {
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  text-transform: uppercase;
+  padding: 17px 20px;
+  border-radius: 10px;
+  border: 0;
+  background-color: #2a7190;
+  letter-spacing: 1.5px;
+  font-size: 14px;
+  transition: all 0.3s ease;
+  box-shadow: #83a094 0px 10px 0px 0px;
+  color: hsl(0, 0%, 100%);
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.shop button:hover {
+  box-shadow: rgb(201, 46, 70) 0px 7px 0px 0px;
+}
+.shop button:active {
+  background-color: rgb(255, 56, 86);
+  box-shadow: rgb(201, 46, 70) 0px 0px 0px 0px;
+  transform: translateY(5px);
+  transition: 200ms;
+}
+
+.shopButton {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-around;
 }
