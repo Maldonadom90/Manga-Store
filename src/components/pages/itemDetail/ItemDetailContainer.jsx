@@ -1,10 +1,11 @@
 import ItemDetail from "./ItemDetail";
-import { products } from "../../productsMock";
 import { useContext, useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { CartContext } from "../../../context/CartContext";
 import { RingLoader } from "react-spinners";
 import Swal from "sweetalert2";
+import { dataBase } from "../../../FireBaseConfig";
+import { collection, getDoc, doc } from "firebase/firestore";
 
 const ItemDetailContainer = () => {
   const [productSelect, setProductSelect] = useState({});
@@ -29,17 +30,11 @@ const ItemDetailContainer = () => {
   };
 
   useEffect(() => {
-    let productFind = products.find((product) => product.id === +id);
-
-    const getProduct = new Promise((res) => {
-      setTimeout(() => {
-        res(productFind);
-      }, 500);
+    let itemCollection = collection(dataBase, "products");
+    let referentialDoc = doc(itemCollection, id);
+    getDoc(referentialDoc).then((res) => {
+      setProductSelect({ ...res.data(), id: res.id });
     });
-
-    getProduct
-      .then((res) => setProductSelect(res))
-      .catch((err) => console.log(err));
   }, [id]);
 
   return (
